@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    printf("Enter the number of terms of Fibonacci series \n");
+    int i,limit;
+    scanf("%d", &limit);
+    int firstTerm=0,secondTerm=1;
+    printf("First %d terms of Fibonacci series are : ",limit);
+    if(limit>=1)
+    {  
+        printf("%d ",firstTerm);
+    }
+    if(limit>=2)
+    {  
+        printf("%d ",secondTerm);
+    }
+ 
+    int prevTerm = secondTerm,prevToPrevTerm = firstTerm;
+    
+    for(i=3;i<=limit;i++)
+    {
+        int ithTerm=prevTerm+prevToPrevTerm; 
+        printf("%d ",ithTerm);
+ 
+        prevToPrevTerm = prevTerm;
+ 
+        prevTerm = ithTerm;   
+    }
+    return 0;
+}
