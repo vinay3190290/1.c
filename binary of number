@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void convertToBinary(unsigned a)
+{
+    if (a > 1)
+        convertToBinary(a / 2);
+
+    printf("%d", a % 2);
+}
+int main() {
+    // Write C code here
+    printf("Binary of the number is: ");
+    convertToBinary(6);
+    printf("\n");
+
+    return 0;
+}
